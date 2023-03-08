@@ -1,0 +1,61 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg); //css tahun 2017 property menurut jonas Now in CSS, there's currently no way of having two transform properties applying at the same time. Jadi kalau mau ada yang nggak bisa 
+    margin-bottom: 15rem;
+   
+    &___shape {
+        width: 15rem;
+        height: 15rem;
+        background-color: orangered;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%); //maksudnya radius di titik x and y 50%. shape-outside: Create an invisible layer around the element from which the online elements around it floats (they now have a custom shape as reference). shape-outside does not cut out the element or affect how it looks. 
+
+        clip-path: circle(50% at 50% 50%); // clip-path: It is to "trim" an element creating a mask on top of him that covers the parts that you do not want to show. It does not affect how the elements around it float (they still have a box as reference)
+
+        transform: translateX(-3rem) skewX(12deg); //supaya ngasih jarak ke text, circle dijauhin dikit jadi -3rem. Btw, some of the transform functions became properties. Jadi, ```transform: translateX(-3rem)``` bisa ditulis ```translate: -3rem;```
+
+        position: relative; // karena di html dia adalah parent dari story___caption, maka dia adalah jangkar dari position absolutenya si &___caption
+    }
+
+    &___img {
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4); //1. Jonas nyoba ngubah posisi image lebih ke tengah...
+        backface-visibility: hidden; //2. Terus ada defiguration karena transform itu td. Dan kata dia menggunakan ```backface-visibility: hidden;``` biasanya memperbaiki translation dan transform yang ngaco. quick fix
+    }
+
+    &___text {
+        transform: skewX(12deg);
+    }
+
+    &___caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;       
+        transition: all .5s; 
+        backface-visibility: hidden;
+    }
+
+    &:hover &___caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &___img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}

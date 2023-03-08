@@ -1,0 +1,143 @@
+.navigation     {
+
+    &___checkbox {
+        display: none;
+    }
+
+    &___button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 200;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &___background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 100;
+        transition: transform .8s cubic-bezier(0.64, 0, 0.78, 0);
+
+        //transform: scale(60);
+    }
+
+    &___nav {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 150;
+
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    &___list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    &___item {
+        margin: 1rem;
+    }
+    
+    &___link {
+        &:link,
+        &:visited {
+            display: inline-block; //ditambahkan ke sini karena jonas 
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem; 
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;            
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 220%; //Specifies the size of the background images.
+            transition: all .4s; //hampir kelupaan nulis second
+
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%; //Specifies the initial position of the background image(s) (after any resizing) within their corresponding background positioning area. Karena background-image awalnya 200% dan dibuat jadi 100% di position, bisa terlihat seperti animasi saat dibuat ditransitionkan. 
+            color: $color-primary;
+            transform: translateX(1rem);
+        }
+    }
+
+
+    //FUNCTIONALITY
+    &___checkbox:checked ~ &___background {
+        transform: scale(80);
+    }
+
+    &___checkbox:checked ~ &___nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    //ICON
+    &___icon {
+        position: relative;
+        margin: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {top: -.8rem;}
+        &::after {top: .8rem;}
+    }
+
+    &___button:hover &___icon::before {
+        top: -1rem;
+    }
+
+    &___button:hover &___icon::after {
+        top: 1rem;
+    }
+
+    &___checkbox:checked + &___buton &___icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    &___checkbox:checked + &___buton &___icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
