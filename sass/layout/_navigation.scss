@@ -1,5 +1,4 @@
 .navigation     {
-
     &___checkbox {
         display: none;
     }
@@ -25,7 +24,9 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        background-image: radial-gradient(
+            $color-primary-light, 
+            $color-primary-dark);
         z-index: 100;
         transition: transform .8s cubic-bezier(0.64, 0, 0.78, 0);
 
@@ -69,7 +70,10 @@
             color: $color-white;
             text-decoration: none;
             text-transform: uppercase;            
-            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-image: linear-gradient(120deg, 
+                transparent 0%, 
+                transparent 50%, 
+                $color-white 50%);
             background-size: 220%; //Specifies the size of the background images.
             transition: all .4s; //hampir kelupaan nulis second
 
@@ -101,7 +105,7 @@
     //ICON
     &___icon {
         position: relative;
-        margin: 3.5rem;
+        margin-top: 3.5rem; //awalnya aku nulis margin doang, jadi dia nggak mau ada di tengah
 
         &,
         &::before,
@@ -117,6 +121,7 @@
             content: "";
             position: absolute;
             left: 0;
+            transition: all .2s;
         }
 
         &::before {top: -.8rem;}
@@ -131,13 +136,17 @@
         top: 1rem;
     }
 
-    &___checkbox:checked + &___buton &___icon::before {
-        top: 0;
-        transform: rotate(45deg);
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent; //awalnya nyoba: display: none; tapi jadinya malah hilang semua. Tapi ini tetep ga jalan.
     }
 
-    &___checkbox:checked + &___buton &___icon::after {
+    &__checkbox:checked + &__button &__icon::before {
         top: 0;
-        transform: rotate(-45deg);
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }

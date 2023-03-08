@@ -15,7 +15,7 @@
 
     <body>
         <div class="navigation">
-            <input type="checkbox" class="navigation___checkbox" id="navi-toggle">
+            <input type="checkbox" class="navigation___checkbox" id="navi-toggle" placeholder="&nbsp;">
 
             <label for="navi-toggle" class="navigation___button">
                 <span class="navigation___icon">&nbsp;</span>
@@ -45,7 +45,7 @@
                     <span class="heading-primary---sub">is where lyfe happens</span>
                 </h1>
 
-                <a href="#" class="btn btn---white btn---animated">Discover our tours</a>
+                <a href="#section-tours" class="btn btn---white btn---animated">Discover our tours</a>
             </div> 
             
         </header>
@@ -128,7 +128,7 @@
                 </div>              
             </section>
         
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         Most Popular Tours
@@ -163,7 +163,7 @@
                                             <p class="card___price-only">Only</p>
                                             <p class="card___price-value">$297</p> 
                                         </div>                                     
-                                        <a href="#" class="btn btn---white">Book now!</a>   
+                                        <a href="#popup" class="btn btn---white">Book now!</a>   
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                                             <p class="card___price-only">Only</p>
                                             <p class="card___price-value">$497</p> 
                                         </div>                                     
-                                        <a href="#" class="btn btn---white">Book now!</a>   
+                                        <a href="#popup" class="btn btn---white">Book now!</a>   
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +230,7 @@
                                             <p class="card___price-only">Only</p>
                                             <p class="card___price-value">$897</p> 
                                         </div>                                     
-                                        <a href="#" class="btn btn---white">Book now!</a>   
+                                        <a href="#popup" class="btn btn---white">Book now!</a>   
                                     </div>
                                 </div>
                             </div>
@@ -364,7 +364,21 @@
             </div>
         </footer>
 
-
+        <div class="popup" id="popup">
+            <div class="popup___content">
+                <div class="popup___left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup___img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup___img">
+                </div>
+                <div class="popup___right">
+                    <a href="#section-tours" class="popup___close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup___text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis ea voluptatem dicta, omnis quidem necessitatibus perferendis aspernatur! Quam incidunt eveniet iusto sed reprehenderit animi quaerat exercitationem hic reiciendis optio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore accusantium reprehenderit id repellat adipisci sunt maxime quos magni reiciendis natus quae, voluptatibus harum corporis, ipsa rem voluptates dolor consectetur hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis exercitationem, dignissimos voluptate suscipit sapiente asperiores nostrum amet natus unde dicta debitis deserunt atque quidem reprehenderit ullam. Magnam unde ea error!</p>
+                    <a href="#" class="btn btn---green">Book now!</a>
+                </div>    
+            </div>            
+        </div>
        
         <!--
         <section class=""grid-test">
