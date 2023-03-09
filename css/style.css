@@ -57,12 +57,16 @@ html {
 }
 
 body {
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -71,7 +75,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-
 .heading-primary---main {
   display: block;
   font-size: 6rem;
@@ -85,8 +88,7 @@ body {
   animation-iteration-count: 2;
   */
 }
-
-.heading-primary---sub {
+.heading-primary---main---sub {
   display: block;
   font-size: 2rem;
   font-size: 700;
