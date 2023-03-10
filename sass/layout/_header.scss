@@ -33,5 +33,12 @@
         @include absCenter;
         text-align: center;
     }
+
+    &___logo-animated {
+        -webkit-animation: moveInTop 0.5s ease-out 0.75s;
+        animation: moveInTop 0.5s ease-out 0.75s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+      }
 }
 
