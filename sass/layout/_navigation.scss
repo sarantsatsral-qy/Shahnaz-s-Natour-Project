@@ -15,6 +15,9 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+        transition: all 0.3s;
+    //   animation: moveInTop 0.5s ease-out 0.75s;
+    //   animation-fill-mode: backwards;
     }
 
     &___background {
@@ -28,18 +31,21 @@
             $color-primary-light, 
             $color-primary-dark);
         z-index: 100;
+        // animation-fill-mode: backwards;
+        // animation: moveInTop 0.5s ease-out 0.75s;
+        // display: transparent;
+        // transform: scale(70);
         transition: transform .8s cubic-bezier(0.64, 0, 0.78, 0);
-
-        //transform: scale(60);
     }
 
     &___nav {
         height: 100vh;
-        width: 100%;
+        // width: 100%; Di punya Farid ga ada, setelah kucek di bawah aku nulis width 0
         position: fixed;
         top: 0;
         right: 0;
         z-index: 150;
+        backface-visibility: hidden; //nambah dari farid. tapi gunanya apa ya. 
 
         opacity: 0;
         width: 0;
@@ -47,17 +53,14 @@
     }
 
     &___list {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include absCenter;
         list-style: none;
         text-align: center;
         width: 100%;
     }
 
     &___item {
-        margin: 1rem;
+        margin-bottom: 1rem;
     }
     
     &___link {
@@ -88,6 +91,7 @@
             background-position: 100%; //Specifies the initial position of the background image(s) (after any resizing) within their corresponding background positioning area. Karena background-image awalnya 200% dan dibuat jadi 100% di position, bisa terlihat seperti animasi saat dibuat ditransitionkan. 
             color: $color-primary;
             transform: translateX(1rem);
+            border-radius: 3px;
         }
     }
 
@@ -130,23 +134,27 @@
 
     &___button:hover &___icon::before {
         top: -1rem;
+        transition: all 0.5s;
     }
 
     &___button:hover &___icon::after {
         top: 1rem;
+        transition: all 0.5s;
     }
 
-    &__checkbox:checked + &__button &__icon {
+    &___checkbox:checked + &___button &___icon {
         background-color: transparent; //awalnya nyoba: display: none; tapi jadinya malah hilang semua. Tapi ini tetep ga jalan.
     }
 
-    &__checkbox:checked + &__button &__icon::before {
+    &___checkbox:checked + &___button &___icon::before {
         top: 0;
         transform: rotate(135deg);
+        transition: all 0.5s;
     }
 
-    &__checkbox:checked + &__button &__icon::after {
+    &___checkbox:checked + &___button &___icon::after {
         top: 0;
         transform: rotate(-135deg);
+        transition: all 0.5s;
     }
 }
