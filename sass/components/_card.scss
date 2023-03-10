@@ -7,11 +7,12 @@
     height: 50rem;
 
     &___side {
-        height: 50rem;
+        font-size: 2rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
         left: 0;
+        height: 52rem; // setelah height ditambah 2rem, dari 50 jadi 52, ukurannya jadi normal
         width: 100%;
         backface-visibility: hidden;
 

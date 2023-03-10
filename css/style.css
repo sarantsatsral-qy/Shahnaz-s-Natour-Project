@@ -247,11 +247,12 @@ body {
   height: 50rem;
 }
 .card___side {
-  height: 50rem;
+  font-size: 2rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
   left: 0;
+  height: 52rem;
   width: 100%;
   backface-visibility: hidden;
   border-radius: 3px;
@@ -719,23 +720,20 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*
+  .logo:hover {
+      animation: Blooming 2s ease-in;
+  }
+  */
 }
-
 .header___logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header___logo {
   height: 3.5rem;
 }
-
-/*
-.logo:hover {
-    animation: Blooming 2s ease-in;
-}
-*/
 .header___text-box {
   position: absolute;
   top: 50%;
