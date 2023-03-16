@@ -163,4 +163,38 @@
         font-weight: 100;
 
     }
+
+    @include respond(tab-port) {
+        height: auto;
+        border-radius: 3px;
+
+        &___side {
+            font-size: auto;
+            position: relative; //karena ga ada the same object that occupy the same position????
+            
+            &---back {
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }  
+
+        &:hover &___side---front {
+            transform: rotateY(-180deg);
+        }
+
+        //BACK SIDE STYLING
+        &___cta {
+            @include relCenter;
+            width: 100%;
+            padding: 4rem;
+        }
+
+        &___price-box {
+            margin-bottom: 8rem;
+        }
+
+        &___price-value {
+            font-size: 6rem;
+        }
+    }
 }

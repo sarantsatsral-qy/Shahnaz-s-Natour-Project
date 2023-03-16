@@ -20,6 +20,10 @@
     & > * {
         transform: skewY(7deg);
     } //.section-features * direct children. Ini menggunakan universal selector untuk children
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
