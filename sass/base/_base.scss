@@ -43,9 +43,5 @@ body {
     @include respond(tab-port) {
       padding: 0;
     }
-
-    @include respond(phone) {
-      padding: 0;
-    } //check ulang bagian ini. Soalnya untuk benr sih bagian paddingnya, tapi sisanya semuanya jadi jelek.
 }
 
