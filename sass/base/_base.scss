@@ -19,11 +19,15 @@ html {
     }
 
     @include respond(phone) {
-      font-size: 46%; //1rem = 7,36px
-    } // diinclude karena menurut adam "Don't forget to include respond-phone, after tab-port in _base.scss if you do this, no change for me until i did.  Thanks Ali."
+      font-size: 30%; //1rem = 7,36px
+    } // menurut jonas harusnya respond(phone) nggak usah diinclude di base, karena sudah termasuk dari tab-port
+    // tapi di qna section respond-phone harusnya diinclude karena menurut A useful tip so you would not care about media queries order, just by making your breakpoints more specific like tab-port // min-width: 601px and max-width: 900px.
+    // dan karena dibuat spesifik, maka @include respond(phone) seharusnya juga diinclude biar tidak terlewat
+    // "Don't forget to include respond-phone, after tab-port in _base.scss if you do this, no change for me until i did. Thanks Ali." 
+    // https://www.udemy.com/course/advanced-css-and-sass/learn/lecture/8274548#questions/8344044
+    // tapi cara ini tuh nggak bagus karena kalau dibandingin dengan caranya jonas, kita mesti include setiap $breakpoint untuk specifying the styles. Bukankah lebih baik pakai 1 aja?
 
-    //awalnya tab-port di - define duluan, tapi karena berlaku bersamaan, maka 
-   
+
     // A useful tip so you would not care about media queries order
     //just by making your breakpoints more specific like so .
     // - phone // max-width: 600px;
@@ -43,5 +47,9 @@ body {
     @include respond(tab-port) {
       padding: 0;
     }
+
+    @include respond(phone) {
+      padding: 0;
+    } //sebagai efek dari aplikasi 
 }
 
