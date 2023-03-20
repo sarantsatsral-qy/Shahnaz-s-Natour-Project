@@ -790,9 +790,19 @@ body {
   font-size: 1.4rem;
   color: #f7f7f7;
 }
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  .footer {
+    padding: 8rem 0;
+  }
+}
 .footer___logo-box {
   text-align: center;
   margin-bottom: 8rem;
+}
+@media (min-width: 37.5625em) and (max-width: 56.25em) {
+  .footer___logo-box {
+    margin-bottom: 6rem;
+  }
 }
 .footer___logo {
   width: 15rem;
