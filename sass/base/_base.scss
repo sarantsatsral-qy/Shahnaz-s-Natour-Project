@@ -18,9 +18,9 @@ html {
       font-size: 50%; //karena rem khusus tab-land ingin kubuat jadi 8px, maka 1rem = 8/16 = 50%
     }
 
-    @include respond(phone) {
-      font-size: 30%; //1rem = 7,36px
-    } // menurut jonas harusnya respond(phone) nggak usah diinclude di base, karena sudah termasuk dari tab-port
+    // @include respond(phone) {
+    //   font-size: 30%; //1rem = 7,36px
+    // } // menurut jonas harusnya respond(phone) nggak usah diinclude di base, karena sudah termasuk dari tab-port
     // tapi di qna section respond-phone harusnya diinclude karena menurut A useful tip so you would not care about media queries order, just by making your breakpoints more specific like tab-port // min-width: 601px and max-width: 900px.
     // dan karena dibuat spesifik, maka @include respond(phone) seharusnya juga diinclude biar tidak terlewat
     // "Don't forget to include respond-phone, after tab-port in _base.scss if you do this, no change for me until i did. Thanks Ali." 
