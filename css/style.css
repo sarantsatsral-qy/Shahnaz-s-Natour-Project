@@ -839,19 +839,9 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
-@media (max-width: 37.5em) {
-  .row:not(:last-child) {
-    margin-bottom: 6rem;
-  }
-}
 @media (min-width: 37.5625em) {
   .row:not(:last-child) {
     margin-bottom: 6rem;
-  }
-}
-@media (max-width: 37.5em) {
-  .row {
-    max-width: 50rem;
   }
 }
 @media (min-width: 37.5625em) {
@@ -870,21 +860,10 @@ body {
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
 }
-@media (max-width: 37.5em) {
-  .row [class^=col-]:not(:last-child) {
-    margin-right: 0 !important;
-    margin-bottom: 6rem;
-  }
-}
 @media (min-width: 37.5625em) {
   .row [class^=col-]:not(:last-child) {
     margin-right: 0 !important;
     margin-bottom: 6rem;
-  }
-}
-@media (max-width: 37.5em) {
-  .row [class^=col-] {
-    width: 100% !important;
   }
 }
 @media (min-width: 37.5625em) {

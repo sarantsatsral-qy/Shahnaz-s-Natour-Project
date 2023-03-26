@@ -8,18 +8,18 @@
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
 
-        @include respond(phone) {
-            margin-bottom: $gutter-vertical-small;
-        }
+        // @include respond(phone) {
+        //     margin-bottom: $gutter-vertical-small;
+        // }
 
         @include respond(tab-port) {
             margin-bottom: $gutter-vertical-small;
         }
     }
 
-    @include respond(phone) {
-        max-width: 50rem;
-    }
+    // @include respond(phone) {
+    //     max-width: 50rem;
+    // }
 
     @include respond(tab-port) {
         max-width: 50rem;
@@ -35,10 +35,10 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
 
-            @include respond(phone) {
-                margin-right: 0  !important; //karena jika sudah berdiri sendiri 100%, maka nggak butuh margin lagi untuk memisahkan masing2 cards.
-                margin-bottom: $gutter-vertical-small;
-            }
+            // @include respond(phone) {
+            //     margin-right: 0  !important; //karena jika sudah berdiri sendiri 100%, maka nggak butuh margin lagi untuk memisahkan masing2 cards.
+            //     margin-bottom: $gutter-vertical-small;
+            // }
 
             @include respond(tab-port) {
                 margin-right: 0  !important; //karena jika sudah berdiri sendiri 100%, maka nggak butuh margin lagi untuk memisahkan masing2 cards.
@@ -46,9 +46,9 @@
             }
         }
 
-        @include respond(phone) {
-            width: 100%  !important; //important digunakan untuk overwrite width setting yang ada di bawah e.g. .col-1-of-2 {width: calc((100% - #{$gutter-horizontal}) / 2);}
-        }
+        // @include respond(phone) {
+        //     width: 100%  !important; //important digunakan untuk overwrite width setting yang ada di bawah e.g. .col-1-of-2 {width: calc((100% - #{$gutter-horizontal}) / 2);}
+        // }
 
         @include respond(tab-port) {
             width: 100%  !important; //important digunakan untuk overwrite width setting yang ada di bawah e.g. .col-1-of-2 {width: calc((100% - #{$gutter-horizontal}) / 2);}
