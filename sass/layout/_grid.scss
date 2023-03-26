@@ -22,7 +22,8 @@
     // }
 
     @include respond(tab-port) {
-        max-width: 50rem;
+        max-width: 50rem; //untuk ngubah bentuk grid pas di tablet, biar ga terlalu lebar karena mengunakan max-width: $grid-width yang 114rem
+        padding: 0 3rem;
     }
 
     @include clearfix;

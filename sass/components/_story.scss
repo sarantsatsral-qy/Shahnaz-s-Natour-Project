@@ -9,6 +9,16 @@
     font-size: $default-font-size;
     transform: skewX(-12deg); //css tahun 2017 property menurut jonas Now in CSS, there's currently no way of having two transform properties applying at the same time. Jadi kalau mau ada yang nggak bisa 
     margin-bottom: 15rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
    
     &___shape {
         width: 15rem;
@@ -23,6 +33,10 @@
         transform: translateX(-3rem) skewX(12deg); //supaya ngasih jarak ke text, circle dijauhin dikit jadi -3rem. Btw, some of the transform functions became properties. Jadi, ```transform: translateX(-3rem)``` bisa ditulis ```translate: -3rem;```
 
         position: relative; // karena di html dia adalah parent dari story___caption, maka dia adalah jangkar dari position absolutenya si &___caption
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0); //to compensate the transform: skewX(0) in the story itself.
+        }
     }
 
     &___img {
@@ -33,6 +47,10 @@
 
     &___text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &___caption {

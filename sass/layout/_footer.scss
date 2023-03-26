@@ -26,6 +26,12 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            // karena di html sebenarnya navigation footer terdiri dari 2 column yang bersebelahan. Harus diubah agar width 100%.
+        }
     }
 
     &___list {
@@ -64,5 +70,10 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }

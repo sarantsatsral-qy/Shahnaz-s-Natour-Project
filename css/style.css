@@ -441,17 +441,23 @@ body {
   .card {
     height: auto;
     border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   }
   .card___side {
-    font-size: auto;
+    height: auto;
     position: relative;
+    box-shadow: none;
   }
   .card___side---back {
-    transform: rotateY(0deg);
+    transform: rotateY(0);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   }
   .card:hover .card___side---front {
-    transform: rotateY(-180deg);
+    transform: rotateY(0);
+  }
+  .card___details {
+    padding: 1rem 3rem;
   }
   .card___cta {
     position: relative;
@@ -459,13 +465,13 @@ body {
     left: 0%;
     transform: translate(0);
     width: 100%;
-    padding: 4rem;
+    padding: 7rem 4rem 4rem 4rem;
   }
   .card___price-box {
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
   .card___price-value {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
 
@@ -577,6 +583,11 @@ body {
   display: block;
   transition: all 0.3s;
 }
+@media (min-width: 37.5625em) {
+  .form___input {
+    width: 100%;
+  }
+}
 .form___input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -604,6 +615,12 @@ body {
 .form___radio-group {
   width: 49%;
   display: inline-block;
+}
+@media (min-width: 37.5625em) {
+  .form___radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .form___radio-input {
   display: none;
@@ -733,6 +750,18 @@ body {
   transform: skewX(-12deg);
   margin-bottom: 15rem;
 }
+@media (min-width: 37.5625em) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .story {
+    transform: skewX(0);
+  }
+}
 .story___shape {
   width: 15rem;
   height: 15rem;
@@ -744,6 +773,11 @@ body {
   transform: translateX(-3rem) skewX(12deg);
   position: relative;
 }
+@media (max-width: 37.5em) {
+  .story___shape {
+    transform: translateX(-3rem) skewX(0);
+  }
+}
 .story___img {
   height: 100%;
   transform: translateX(-4rem) scale(1.4);
@@ -751,6 +785,11 @@ body {
 }
 .story___text {
   transform: skewX(12deg);
+}
+@media (max-width: 37.5em) {
+  .story___text {
+    transform: skewX(0);
+  }
 }
 .story___caption {
   position: absolute;
@@ -803,6 +842,12 @@ body {
   padding-top: 2rem;
   display: inline-block;
 }
+@media (min-width: 37.5625em) {
+  .footer___navigation {
+    width: 100%;
+    text-align: center;
+  }
+}
 .footer___list {
   list-style: none;
 }
@@ -831,6 +876,12 @@ body {
   width: 80%;
   float: right;
 }
+@media (min-width: 37.5625em) {
+  .footer___copyright {
+    width: 100%;
+    float: none;
+  }
+}
 
 .row {
   max-width: 114rem;
@@ -847,6 +898,7 @@ body {
 @media (min-width: 37.5625em) {
   .row {
     max-width: 50rem;
+    padding: 0 3rem;
   }
 }
 .row::after {
@@ -892,7 +944,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -903,6 +955,11 @@ body {
       animation: Blooming 2s ease-in;
   }
   */
+}
+@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  }
 }
 @media (max-width: 37.5em) {
   .header {
@@ -951,7 +1008,14 @@ body {
 }
 @media (min-width: 37.5625em) {
   .navigation___button {
-    padding: 0;
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .navigation___button {
+    top: 3.5rem;
+    right: 3.5rem;
   }
 }
 .navigation___background {
@@ -964,6 +1028,18 @@ body {
   background-image: radial-gradient(#55c57a, #28b485);
   z-index: 100;
   transition: transform 0.8s cubic-bezier(0.64, 0, 0.78, 0);
+}
+@media (min-width: 37.5625em) {
+  .navigation___background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .navigation___background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 .navigation___nav {
   height: 100vh;
@@ -1125,9 +1201,29 @@ body {
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem;
+}
+@media (min-width: 56.3125em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
+    background-size: cover;
+  }
+}
+@media (min-width: 37.5625em) {
+  .book {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat-10.jpg);
+  }
 }
 .book___form {
   width: 50%;
   padding: 6rem;
+}
+@media (min-width: 56.3125em) {
+  .book___form {
+    width: 65%;
+  }
+}
+@media (min-width: 37.5625em) {
+  .book___form {
+    width: 65%;
+  }
 }

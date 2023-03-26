@@ -16,13 +16,18 @@
         text-align: center;
         cursor: pointer;
         transition: all 0.3s;
-    //   animation: moveInTop 0.5s ease-out 0.75s;
-    //   animation-fill-mode: backwards;
+        // animation: moveInTop 0.5s ease-out 0.75s;
+        // animation-fill-mode: backwards;
 
-    @include respond(tab-port) {
-        padding: 0;
-      }
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
 
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &___background {
@@ -41,6 +46,16 @@
         // display: transparent;
         // transform: scale(70);
         transition: transform .8s cubic-bezier(0.64, 0, 0.78, 0);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &___nav {
