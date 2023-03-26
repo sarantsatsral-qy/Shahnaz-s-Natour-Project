@@ -13,6 +13,12 @@
     visibility: hidden; // lebih baik pakai opacity 0 dan visibility hidden karena bisa dianimated, nggak seperti display: none;
     transition: all .3s;  
 
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    } //feature query - graceful degradation: supaya bisa berjalan di browser2 lama, maka css lines ini perlu diberi keterangan dengan @supports terlebih dulu
+
     &___content {
         @include absCenter;
         

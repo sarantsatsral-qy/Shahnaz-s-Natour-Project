@@ -14,6 +14,7 @@
         left: 0;
         height: 52rem; // setelah height ditambah 2rem, dari 50 jadi 52, ukurannya jadi normal
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
 
         border-radius: 3px;
