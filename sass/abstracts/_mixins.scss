@@ -50,32 +50,32 @@ ada sekumpulan orang yang udah nyoba khusus untuk media query lebih baik pakai e
 
 */
 
-// @mixin respond($breakpoint) {
-//     @if $breakpoint == tab-land {
-//         @media (min-width:56.3125em) {@content};
-//         // @media (min-width:56.3125em) and (max-width: 75em) {@content};
-//     } //901px - 1200px
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-land {
+        @media (min-width:56.3125em) {@content};
+        // @media (min-width:56.3125em) and (max-width: 75em) {@content};
+    } //901px - 1200px
 
-//     @if $breakpoint == tab-port {
-//         @media (min-width: 37.5625em) {@content};
-//         //@media (min-width: 37.5625em) and (max-width: 56.25em) {@content};
-//       } //601px - 900px
+    @if $breakpoint == tab-port {
+        @media (min-width: 37.5625em) {@content};
+        //@media (min-width: 37.5625em) and (max-width: 56.25em) {@content};
+      } //601px - 900px
 
-//     @if $breakpoint == phone {
-//         @media (max-width: 37.5em) {@content}; //600px
-//     }
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content}; //600px
+    }
 
-//     @if $breakpoint == desktop {
-//         @media (min-width: 112.5em) {@content}; //1800px
-//     }
-// }
+    @if $breakpoint == desktop {
+        @media (min-width: 112.5em) {@content}; //1800px
+    }
+}
 // caranya jonas, deprecated, diganti dengan cara yang lebih 
 
-$phone: 600px;
-$tablet-portrait: 900px;
-$tablet-landscape: 1200px;
-$big-desktop: 1800px;
+// $phone: 600px;
+// $tablet-portrait: 900px;
+// $tablet-landscape: 1200px;
+// $big-desktop: 1800px;
  
-@mixin respond($breakpoint) {
-    @media (max-width: $breakpoint/16px * 1em) {@content};
-} // This way you don't need all those if-statements, since the @media keyword already functions as an if-statement.
+// @mixin respond($breakpoint) {
+//     @media (max-width: $breakpoint/16px * 1em) {@content};
+// } // This way you don't need all those if-statements, since the @media keyword already functions as an if-statement.
