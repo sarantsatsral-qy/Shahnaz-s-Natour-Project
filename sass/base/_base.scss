@@ -48,8 +48,8 @@ body {
       padding: 0;
     }
 
-    @include respond(phone) {
-      padding: 0;
-    } //sebagai efek dari aplikasi 
+    // @include respond(phone) {
+    //   padding: 0;
+    // } //sebagai efek dari aplikasi caranya adam
 }
 
